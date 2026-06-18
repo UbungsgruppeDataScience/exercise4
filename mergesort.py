@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 def merge_sort(array):
     """Sort a list in ascending order in place using merge sort.
-    
+
     Merge sort is a divide-and-conquer algorithm: the list is split into two
     halves, each half is sorted recursively, and the two sorted halves are
     then merged back together.
@@ -13,7 +13,7 @@ def merge_sort(array):
     Args:
         array: The list to sort. It is modified in place.
     """
-    
+
     # Base case: a list with 0 or 1 element is already sorted
     if len(array) <= 1:
         return
@@ -47,7 +47,8 @@ def merge_sort(array):
         array[merge_index] = left[left_index]
         left_index += 1
         merge_index += 1
-
+    
+    # Copy any remaining elements from the right half
     while right_index < len(right):
         array[merge_index] = right[right_index]
         right_index += 1
